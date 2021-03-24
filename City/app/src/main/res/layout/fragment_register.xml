@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.RegisterFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="REGISTER"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/back"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
+
+        <TextView
+            android:id="@+id/first_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name*"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="@+id/back"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/first_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_label" />
+
+
+        <TextView
+            android:id="@+id/last_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name*"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/first_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/first_name"
+            app:layout_constraintStart_toStartOf="@+id/last_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/last_name_label" />
+
+        <TextView
+            android:id="@+id/phone_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/last_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:maxLength="11"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="@+id/last_name"
+            app:layout_constraintStart_toStartOf="@+id/phone_number_label"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_label" />
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address*"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/phone_number_label"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/phone_number"
+            app:layout_constraintStart_toStartOf="@+id/email_label"
+            app:layout_constraintTop_toBottomOf="@+id/email_label" />
+
+        <TextView
+            android:id="@+id/pass1_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password*"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/email_label"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+        <EditText
+            android:id="@+id/pass1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/email"
+            app:layout_constraintStart_toStartOf="@+id/pass1_label"
+            app:layout_constraintTop_toBottomOf="@+id/pass1_label" />
+
+        <TextView
+            android:id="@+id/pass2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password*"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/pass1_label"
+            app:layout_constraintTop_toBottomOf="@+id/pass1" />
+
+        <EditText
+            android:id="@+id/pass2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/pass1"
+            app:layout_constraintStart_toStartOf="@+id/pass2_label"
+            app:layout_constraintTop_toBottomOf="@+id/pass2_label" />
+
+        <Button
+            android:id="@+id/submit_register"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pass2" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I Agree to the "
+            android:textColor="#6A6A6A"
+            app:layout_constraintBottom_toTopOf="@+id/submit_register"
+            app:layout_constraintStart_toStartOf="@+id/submit_register" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/submit_register"
+            app:layout_constraintStart_toEndOf="@+id/checkBox"
+            app:layout_constraintTop_toTopOf="@+id/checkBox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
